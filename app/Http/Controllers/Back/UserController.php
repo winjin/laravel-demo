@@ -10,10 +10,12 @@ class UserController extends Controller
 {
     //
     public function __construct()
-    {}
+    {
+        // 放中间件 过滤 
+    }
 
     public function index(Users $user)
     {
-        return $user->table;
+        return view('back.user');
     }
 }

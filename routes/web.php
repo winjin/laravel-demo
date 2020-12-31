@@ -18,10 +18,11 @@ Route::get('/', function () {
 
 Route::get('login', 'Back\LoginController@index');
 Route::post('login/login', 'Back\LoginController@login');
-Route::get('users', 'Back\UserController@index');
+Route::get('user', 'Back\UserController@index');
 Route::get('test', 'Back\TestController@index');
 
 Route::get('blade', function () {
     return view('layouts.child');
 });
 
+Route::get('first', 'Back\FirstController@index');

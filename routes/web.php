@@ -19,11 +19,9 @@ Route::get('/', function () {
 Route::get('login', 'Back\LoginController@index');
 Route::post('login/login', 'Back\LoginController@login');
 Route::get('users', 'Back\UserController@index');
+Route::get('test', 'Back\TestController@index');
 
-// Http\Controllers\Back\LoginController.php
+Route::get('blade', function () {
+    return view('layouts.child');
+});
 
-// Route::get('/home', 'HomeController@index');
-// Http\Controllers\HomeController.php
-
-// Route::post('changePic','Members\MembersController@changePic');
-// D:\laragon\www\dcr_server_php\app\Http\Controllers\Members\MembersController.php

@@ -1,6 +1,6 @@
 @extends('back.skeleton')
 
-@section('title', 'User Page')
+@section('title', 'Try Page')
 
 <!-- body 部分的内容 start -->
 @section('content')
@@ -115,12 +115,6 @@
   <li><a href="#">Library</a></li>
   <li class="active">Data</li>
 </ol>
-
-
-
-
-
-
 
 
 

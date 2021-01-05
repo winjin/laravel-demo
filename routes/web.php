@@ -21,7 +21,7 @@ Route::post('login/login', 'Back\LoginController@login');
 Route::get('user', 'Back\UserController@index');
 Route::get('test', 'Back\TestController@index');
 
-Route::get('blade', function () {
+Route::get('child', function () {
     return view('layouts.child');
 });
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Background Home Page Controller
+ * Back end Role Page Controller
  *
  * @author Justin <84252802@qq.com>
  */
@@ -19,8 +19,8 @@ class IndexController extends Controller
 
     public function index()
     {
-        // return view('admin.index.index',$info);
-        return view('admin.index.index');
+        // return view('admin.role.index',$data);
+        return view('admin.role.index');
     }
 
 }

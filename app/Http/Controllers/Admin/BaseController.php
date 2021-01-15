@@ -10,14 +10,14 @@ namespace App\Http\Controllers\Admin;
 use App\Facades\AuthFacade;
 use App\Http\Controllers\Controller;
 use App\Repositories\Admin\Contracts\AdminMenuInterface;
-use App\Traits\Admin\AdminTree;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
+// use App\Traits\Admin\AdminTree;
+// use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+// use Illuminate\Foundation\Bus\DispatchesJobs;
+// use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class BaseController extends Controller
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests , AdminTree;
+    // use AuthorizesRequests, DispatchesJobs, ValidatesRequests , AdminTree;
 
     /**
      * 构造函数
@@ -28,28 +28,28 @@ class BaseController extends Controller
     public function __construct()
     {
         //登录用户信息
-        $loginUser   = session(LOGIN_USER);
+        // $loginUser   = session(LOGIN_USER);
         //基础变量
-        $baseVar     = $this->baseVar($loginUser);
+        // $baseVar     = $this->baseVar($loginUser);
         //当前url
-        $url         = request()->route()->getName();
+        // $url         = request()->route()->getName();
 
         //使用app()->make 实例化注册类
-        $menu = app()->make(AdminMenuInterface::class)->findByRouteName($url);
-        $menu && $baseVar['admin']['title'] = $menu->name;
-        AuthFacade::adminLog($url,$loginUser,$menu);
+        // $menu = app()->make(AdminMenuInterface::class)->findByRouteName($url);
+        // $menu && $baseVar['admin']['title'] = $menu->name;
+        // AuthFacade::adminLog($url,$loginUser,$menu);
 
-        if ('admin.auth.login' !== $url
-            && !request()->pjax()
-            && session()->has(LOGIN_USER))
-        {
-            $baseVar['admin']['menu'] = $this->getLeftMenu($url,$loginUser);
-        }
+        // if ('admin.auth.login' !== $url
+        //     && !request()->pjax()
+        //     && session()->has(LOGIN_USER))
+        // {
+        //     $baseVar['admin']['menu'] = $this->getLeftMenu($url,$loginUser);
+        // }
 
         //全局通用变量
-        view()->share('admin',$baseVar['admin']);
-        view()->share('debug',$baseVar['debug']);
-        view()->share('cookiePrefix',$baseVar['cookie_prefix']);
+        // view()->share('admin',$baseVar['admin']);
+        // view()->share('debug',$baseVar['debug']);
+        // view()->share('cookiePrefix',$baseVar['cookie_prefix']);
     }
 
     /**

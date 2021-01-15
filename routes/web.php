@@ -12,17 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-    // return view('back/login');
+    echo "welcome";
+    // return view('welcome');
 });
 
-Route::get('login', 'Back\LoginController@index');
-Route::post('login/login', 'Back\LoginController@login');
-Route::get('user', 'Back\UserController@index');
-Route::get('test', 'Back\TestController@index');
 
-Route::get('child', function () {
-    return view('layouts.child');
-});
-
-Route::get('first', 'Back\FirstController@index');
+// Route::get('admin', 'Admin\IndexController@index');
+// Route::get('admin', function () {
+//     echo "string";
+// });
+// Route::get('admin/index', 'Admin\IndexController@index');

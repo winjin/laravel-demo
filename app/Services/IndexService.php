@@ -60,7 +60,7 @@ class IndexService
 
         return [
             // 后台菜单数量
-            'admin_menu_count' => AdminMenu::count(),
+            // 'admin_menu_count' => AdminMenu::count(),
             // // 后台用户数量
             // 'admin_user_count' => AdminUser::count(),
             // // 后台角色数量
@@ -68,7 +68,7 @@ class IndexService
             // // 后台日志数量
             // 'admin_log_count'  => AdminLog::count(),
             // 系统信息
-            'system_info'      => SystemInfo::getSystemInfo(),
+            // 'system_info'      => SystemInfo::getSystemInfo(),
             //访问信息
             // 'visitor_info'     => $this->request,
             //默认密码警告

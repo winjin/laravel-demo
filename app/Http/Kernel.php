@@ -3,7 +3,7 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-
+// 处理 HTTP 会话 的读写、确定应用程序是否处于维护模式、验证 CSRF 令牌等。
 class Kernel extends HttpKernel
 {
     /**

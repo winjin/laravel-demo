@@ -8,8 +8,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
-// class IndexController extends BaseController
-class IndexController extends Controller
+// class AdminRoleController extends BaseController
+class AdminRoleController extends Controller
 {
     // public function __construct()
     // {
@@ -20,7 +20,11 @@ class IndexController extends Controller
     public function index()
     {
         // return view('admin.role.index',$data);
-        return view('admin.role.index');
+        return view('admin.admin_role.index');
     }
 
+    public function add()
+    {
+        return view('admin.admin_role.add');
+    }
 }

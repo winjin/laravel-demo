@@ -94,8 +94,7 @@
                                     <i class="fa fa-pencil"></i>
                                 </a>
                                 <a class="btn btn-danger btn-xs AjaxButton" data-toggle="tooltip" title="删除"
-                                   data-id="{{$item['id']}}" data-confirm-title="删除确认"
-                                   data-confirm-content='您确定要删除ID为 <span class="text-red">{{$item['id']}}</span> 的数据吗'
+                                   data-id="{{$item['id']}}" data-confirm-title="删除确认" data-confirm-content='您确定要删除ID为 <span class="text-red">{{$item[id]}}</span> 的数据吗'
                                    data-url="{{route('admin.admin_role.del')}}">
                                     <i class="fa fa-trash"></i>
                                 </a>
@@ -103,14 +102,14 @@
                                 @if($item['status'] == 1)
                                 <a class="btn btn-warning btn-xs AjaxButton" data-toggle="tooltip" title="禁用"
                                    data-id="{{$item['id']}}" data-confirm-title="禁用确认"
-                                   data-confirm-content='您确定要禁用ID为 <span class="text-red">{{$item['id']}}</span> 的数据吗'
+                                   data-confirm-content='您确定要禁用ID为 <span class="text-red">{{$item[id]}}</span> 的数据吗'
                                    data-url="{{route('admin.admin_role.disable')}}">
                                     <i class="fa fa-circle"></i>
                                 </a>
                                 @else
                                 <a class="btn btn-success btn-xs AjaxButton" data-toggle="tooltip" title="启用"
                                    data-id="{{$item['id']}}" data-confirm-title="启用确认"
-                                   data-confirm-content='您确定要启用ID为 <span class="text-red">{{$item['id']}}</span> 的数据吗'
+                                   data-confirm-content='您确定要启用ID为 <span class="text-red">{{$item[id]}}</span> 的数据吗'
                                    data-url="{{route('admin.admin_role.enable')}}">
                                     <i class="fa fa-circle"></i>
                                 </a>

@@ -39,10 +39,8 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
         
-	// 定义路由文件 admin.php
+	   // 定义路由文件 admin.php
         $this->mapAdminRoutes();
-
-        //
     }
 
     /**

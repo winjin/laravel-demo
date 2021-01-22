@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -15,6 +15,14 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
+
+    /**
+     * The path to the "home" route for your application.
+     *
+     * @var string
+     */
+    // public const HOME = '/home';
+    const HOME = '/home';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -38,9 +46,10 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
-        
-	   // 定义路由文件 admin.php
+
         $this->mapAdminRoutes();
+
+        //
     }
 
     /**
@@ -53,8 +62,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web.php'));
     }
 
     /**
@@ -67,15 +76,16 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+            ->middleware('api')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/api.php'));
     }
 
     /**
-     * 定义自定义的路由文件
-     * [mapAdminRoutes description]
-     * @return [type] [description]
+     * 鑷畾涔塧dmin妯″潡璺敱
+     *
+     * Author: Stephen
+     * Date: 2020/6/5 14:00:09
      */
     protected function mapAdminRoutes()
     {

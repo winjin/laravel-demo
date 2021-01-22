@@ -20,7 +20,11 @@ Route::group(
     
     //角色管理
     // Route::get('admin_role/index',"AdminRoleController@index")->name('admin.admin_role.index');
-    Route::get('admin_role/index',"AdminRoleController@index");
+    // Route::get('admin_role/index',"AdminRoleController@index");
+    Route::get('admin_role/index', function(){
+        echo "sss";
+        return view('admin.admin_role.index');
+    });
     // //角色管理-添加用户-显示界面
     // Route::get('admin_role/add',"AdminRoleController@add")->name('admin.admin_role.add');
     // //角色管理-添加用户
